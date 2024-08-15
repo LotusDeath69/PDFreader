@@ -3,7 +3,7 @@ import pyttsx3
 import os 
 
 class PDfreader: 
-    def __init__(self, file: str, size=50, audio_rate=200, multithread=False) -> None:
+    def __init__(self, file: str, size=50, audio_rate=200) -> None:
         self.file = file
         try:
             self.new_dir = os.path.join(os.getcwd(), f"{file.strip('.pdf')} audio") 
@@ -13,7 +13,7 @@ class PDfreader:
         self.reader = PdfReader(file) # create reader object
         self.audioSpeaker(audio_rate) # create audio speaker object 
         self.loadPages() # load pages from pdf 
-        self.run(size, multithread)
+        self.run(size)
         
     def loadPages(self) -> None: 
         self.pages = []
@@ -47,7 +47,7 @@ class PDfreader:
         new_path = os.path.join(self.new_dir, file_name)
         os.replace(current_path, new_path)
     
-    def run(self, size: int, multithread: bool) -> None: 
+    def run(self, size: int) -> None: 
         try:
             for i in range(0, self.page_length, size): 
                 self.mergePages(self.pages, i, size) # merge pages together into a str
