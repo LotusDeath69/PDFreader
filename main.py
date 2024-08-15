@@ -62,5 +62,4 @@ class PDfreader:
             
             
 if __name__ == "__main__": 
-    transcibe = PDfreader("test.pdf") 
-
+    test = PDfreader("test.pdf") 
