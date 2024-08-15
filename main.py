@@ -3,7 +3,7 @@ import pyttsx3
 import os 
 
 class PDfreader: 
-    def __init__(self, file: str, size=50, audio_rate=200) -> None:
+    def __init__(self, file: str, size=50, audio_rate=150) -> None:
         self.file = file
         try:
             self.new_dir = os.path.join(os.getcwd(), f"{file.strip('.pdf')} audio") 
@@ -62,5 +62,5 @@ class PDfreader:
             
             
 if __name__ == "__main__": 
-    transcibe = PDfreader("The_intelligent_investor.pdf") 
+    transcibe = PDfreader("test.pdf") 
 
