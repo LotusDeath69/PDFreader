@@ -59,7 +59,8 @@ class PDfreader:
         except Exception as error: 
             print(f"Cannot complete task\n{error}")
             exit()
-                
+            
             
 if __name__ == "__main__": 
     transcibe = PDfreader("The_intelligent_investor.pdf") 
+    print('abc')
