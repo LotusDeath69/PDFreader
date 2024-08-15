@@ -2,6 +2,7 @@
 
 ## **Usage:** 
 ### Convert words in English from a pdf file into mp3 file(s) 
+### Create an object using the PDFreader class and enter pdf file path 
 
 ## **Requirements:**
 ```
