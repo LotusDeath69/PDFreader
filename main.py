@@ -63,4 +63,3 @@ class PDfreader:
             
 if __name__ == "__main__": 
     transcibe = PDfreader("The_intelligent_investor.pdf") 
-    print('abc')
