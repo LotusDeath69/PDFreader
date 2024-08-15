@@ -62,4 +62,4 @@ class PDfreader:
             
             
 if __name__ == "__main__": 
-    test = PDfreader("test.pdf") 
+    test = PDfreader("maxdama.pdf") 
