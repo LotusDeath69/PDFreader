@@ -3,7 +3,7 @@ import pyttsx3
 import os 
 
 class PDfreader: 
-    def __init__(self, file: str, size=50, audio_rate=150) -> None:
+    def __init__(self, file: str, size=50, audio_rate=100) -> None:
         self.file = file
         try:
             self.new_dir = os.path.join(os.getcwd(), f"{file.strip('.pdf')} audio") 
@@ -55,11 +55,11 @@ class PDfreader:
                 self.saveAudio(self.merged_pages, file_path) # str -> .mp3
                 self.engine.runAndWait()
                 self.replaceFileLocation(file_path) # move .mp3 to new dir
-                print(f"Sucessfully translate pages: {i} - {i+size} ")
+                print(f"Sucessfully translate pages: {i+1} - {i+size} ")
         except Exception as error: 
             print(f"Cannot complete task\n{error}")
             exit()
             
             
 if __name__ == "__main__": 
-    test = PDfreader("maxdama.pdf") 
+    test = PDfreader("Systematic Trading A unique new method for designing trading and investing systems (Robert Carver) (Z-Library).pdf") 
